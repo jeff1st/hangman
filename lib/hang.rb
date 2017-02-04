@@ -1,4 +1,7 @@
+require 'loads'
+
 class Hangman
+  include Load
 
   def initialize(name, number = 10)
     @name = name
