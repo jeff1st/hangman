@@ -14,6 +14,13 @@ module Ingame
       check_letter(answer)
       check_win
       val = false
+      puts "\nDo you want to save and exit?"
+      while val == false
+        resp = gets.chomp.downcase
+        resp =~ /y|n/ ? (val = true) : (puts "\nPlease y or n")
+      end
+      val = false
+      resp == "y" ? (save_game) : (puts "\nOk")
     end
     puts "\nYou loose"
     puts "\nWord to guess was #{@secret_word.join('')}"

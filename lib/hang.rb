@@ -1,12 +1,10 @@
 require_relative './loads'
 require_relative './init'
-require_relative './interface'
 require_relative './ingame'
 
 class Hangman
   include Load
   include Initialization
-  include Interface
   include Ingame
 
   def initialize(turns = 10)
@@ -34,6 +32,7 @@ class Hangman
       main_loop
     when "2"
       load_game
+      main_loop
     when "3"
       exit(0)
     end
