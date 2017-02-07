@@ -13,6 +13,7 @@ class Hangman
     @secret_word = []
     @secret_hash = Hash.new(0)
     @player_tries = []
+    @file = nil
     start
   end
 
@@ -31,7 +32,7 @@ class Hangman
       init
       main_loop
     when "2"
-      load_game
+      show_games
       main_loop
     when "3"
       exit(0)
