@@ -1,4 +1,4 @@
-require_relative './loads'
+require_relative './load'
 require_relative './init'
 require_relative './ingame'
 
